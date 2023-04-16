@@ -1,0 +1,20 @@
+<%- include('searchResults') -%>
+
+<div class="resultsBtnDiv">
+    <form action="/search/createWatched" enctype="multipart/form-data" method="POST">
+        <button type="submit" value="Upload" class="button is-warning is-outlined is-small addToBtns watchedBtn">Add to Watched</button>
+    </form>
+
+    <form action="/search/createWatchlist" enctype="multipart/form-data" method="POST">
+        <button type="submit" value="Upload" class="button is-warning is-outlined is-small addToBtns">Add to Watchlist</button>
+    </form>
+</div>
+
+<div class="alertBox">
+    <span class="alertMsg">Login or signup to add to your list</span>
+    <a href="/login" class=""><button class="button is-medium flex-item" id="popupBtn">Login</button></a>
+    <a href="/signup" class=""><button class="button is-medium flex-item" id="popupBtn">Signup</button></a>
+    <span class="alertClosebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+</div>
+
+<%- include('partials/footer') -%>
