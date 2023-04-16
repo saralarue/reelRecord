@@ -8,7 +8,7 @@ const methodOverride = require('method-override') // Import method-override to u
 const flash = require('express-flash') // Import express-flash for flash messages
 const logger = require('morgan') // Import morgan for logging
 const connectDB = require('./config/database') // Import database connection from config/database.js
-const config = require('./config/.env') // Import .env file for configuration
+const config = require('/config/.env') // Import .env file for configuration
 
 // Import routes
 const mainRoutes = require('./routes/main')
