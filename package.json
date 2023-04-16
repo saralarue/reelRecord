@@ -4,8 +4,8 @@
   "description": "Starter template for future projects",
   "main": "server.js",
   "scripts": {
-    "start": "nodemon server.js css-watch",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js css-watch",
+    "dev": "nodemon server.js css-watch"
   },
   "author": "",
   "license": "MIT",
