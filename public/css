@@ -1,0 +1,651 @@
+html{
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    background-color: black;
+    color: white;
+}
+
+
+/********************************
+HEADER
+********************************/
+h1{
+    padding: 10px;
+    text-align: center;
+    
+}
+h1 a{
+    text-decoration: none;
+    color: white;
+}
+
+h1 a:hover {
+    color: rgb(196, 196, 196);
+}
+
+
+
+/********************************
+INDEX
+********************************/
+.indexHero {
+    background: linear-gradient(rgba(0, 0, 0, 0.30), rgba(0, 0, 0, 0.50)), url(
+        "https://images.unsplash.com/photo-1536440136628-849c177e76a1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1925&q=80") 
+        no-repeat center center fixed;
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: fixed;
+}
+
+#indexBtn{
+    display: block;
+    margin-top: 15%;
+    margin-bottom: 10px;
+    font-size: 20px;
+    border-radius: 5px;
+    width: 300px;
+}
+
+.flex-container {
+    height: 65%;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.row {
+    width: auto;
+}
+
+.flex-item {
+    text-align: center;
+}
+
+
+/********************************
+LOGIN AND SIGN UP PAGES
+********************************/
+.loginSection{
+    padding-top: 3%;
+    height: 100%;
+}
+
+.loginForm{
+    padding: 5%;
+}
+
+.field{
+    padding: .5%;
+}
+
+.loginAndSignupDiv{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.signupBtn{
+    display: flex;
+    justify-content: center;
+}
+
+
+/********************************
+SEARCH PAGE
+********************************/
+.searchGradientBackground, .resultsGradientBackground {
+    background: radial-gradient(circle, rgba(91,91,91,1) 0%, rgba(0,0,0,1) 38%);
+    margin: 0 10% 0 10%;
+}
+
+.searchPageGoToBtns {
+    padding-top: 10%;
+}
+
+.searchPageGoToBtns a {
+    margin: 1%;
+}
+
+#searchPosterSize, #resultsPosterSize{
+    height: 1.5%;
+    width: 333.33px;
+    border-radius: 5px;
+    border: 7px solid #fff;
+    margin-left: 20%;
+}
+
+.tmdbAttr{
+    color: gray;
+    margin-bottom: 5%;
+    text-align: center;
+    font-size: .8rem;
+}
+
+
+/********************************
+SEARCH RESULTS
+********************************/
+.resultsHeader {
+    display: grid;
+    grid-template-columns: 1fr .25fr;
+    width: 90%;
+    position: fixed;
+    overflow: hidden;
+    background-color: black;
+    top: 0;
+    width: 100%; 
+    left: 0;
+    z-index: 1;
+}
+
+.resultsH1{
+    margin-left: 39%;
+}
+
+.resultsSearchbar{
+    margin-right: 15%;
+    margin-top: 5%;
+}
+
+.resultsContainer{
+    padding-top: 10%;
+    margin-right: 3%;
+}
+
+.titleAndGoToBtns {
+    display: grid;
+    grid-template-columns: 1fr .5fr;
+}
+  
+.addToBtns {
+    display: block;
+    margin-top: 5%;
+    margin-left: 30%;  
+}
+
+.yearAndAvg{
+    margin-top: 5%;
+}
+
+.overview{
+    margin-top: 5%;
+    margin-bottom: 10%;
+}
+
+.goToBtnResults{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20%;
+}
+
+
+/********************************
+NO RESULTS
+********************************/
+
+
+.noResults {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+.centered {
+    text-align: center;
+}
+  
+.centered h1 {
+    color: rgb(205, 203, 203);
+    font-weight: normal;
+    font-size: 50px;
+    padding: 0;
+    margin: 0;
+    margin-top: 10px;
+    line-height: 50px;
+}
+
+.centered h2 {
+    padding-top: 5%;
+    color: rgb(222, 220, 220);
+    font-weight: normal;
+    font-size: 1.5em;
+}
+
+
+
+
+
+
+/********************************
+WATCHED and WATCHLIST
+********************************/
+.resultsHeader {
+    display: grid;
+    grid-template-columns: 1fr .25fr;
+    width: 90%;
+    position: fixed;
+}
+
+.listBackground {
+    margin: 0 10% 0 10%;
+}
+
+.movieGridContainer{
+    padding-top: 5%;
+}
+
+.movieGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 10px;
+    margin-top: 3%;
+}
+
+.movieListItem {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+img{
+    height: 100%;
+    width: 150px;
+    border-radius: 3px;
+    border: 2px solid #fff;
+    transition: all 0.3s ease-in-out;
+    background-color: white;
+}
+
+img:hover{
+    border: 2px solid white;
+    padding: 2px;
+    background-color: white;
+}
+
+.poster-container {
+    position: relative;
+}
+
+.trashcanUnset{
+    all: unset;
+}
+
+.trash-icon {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin-bottom: 10%;
+    margin-left: 5%;
+    color: white;
+    opacity: 50%;
+    text-shadow: 2px 3px 2px black;
+    cursor: pointer;
+}
+
+.listH2{
+    text-align: center;
+    color: white;
+    font-size: 1.25rem;
+}
+
+.listHeader{
+    position: static;
+}
+
+.links{
+    padding-top: 2%;
+    width: 25%;
+}
+
+.links a{
+    display: block;
+}
+
+.links a:hover{
+    color: rgb(175, 175, 175);
+}
+
+
+/********************************
+SEARCH RESULTS WITH ERROR MSG
+********************************/
+.alertBox {
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    font-size: 18px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    width: 300px;
+    background-color: #9a0e0e;
+    box-shadow: 3px 3px 10px 0 rgba(255,255,255, 0.5);
+}
+
+.alertMsg {
+    padding: 10px;
+}
+
+.alertClosebtn {
+    margin-left: 15px;
+    color: #fff;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.alertClosebtn:hover {
+    color: black;
+}
+
+#popupBtn {
+    width: 75%;
+    margin-left: 12.5%;
+    display: block;
+    margin-top: 7%;
+
+}
+
+
+
+/****************************************************************************
+****************************************************************************
+
+MEDIA QUERIES
+
+****************************************************************************
+****************************************************************************/
+
+@media all and (min-width: 1024px) and (max-width: 1280px) {
+    /**********************
+    SEARCH PAGE
+    **********************/
+    #searchPosterSize{
+        margin-left: 10%;
+    }
+    #searchH1{
+        font-size: 2rem;
+    }
+
+
+
+    /**********************
+    SEARCH RESULTS
+    **********************/
+    .movieGridContainer{
+        padding-top: 7%;
+    }
+}
+
+
+@media all and (min-width: 810px) and (max-width: 1080px) { 
+    /**********************
+    SEARCH RESULTS
+    **********************/
+    .goToBtnResults{
+        transform: scale(.7);
+    }
+}
+
+
+@media all and (min-width: 768px) and (max-width: 1024px) { 
+    /**********************
+    LOGIN AND SIGN UP PAGES
+    **********************/
+    #loginContainer, #signupContainer{
+        width: 75%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
+    /**********************
+    SEARCH PAGE
+    **********************/
+    .searchGradientBackground {
+        background: radial-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, .8)), url(
+            "https://images.unsplash.com/photo-1616530940355-351fabd9524b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80") repeat center fixed;
+        margin: 0;
+    }
+
+    #searchPosterSize, .removeDiv{
+        display: none;
+    }
+
+    .searchContent{
+        margin: auto;
+        width: 50%;
+    }
+
+    #searchH1{
+        text-shadow: 2px 3px 2px black;
+    }
+
+    .goToBtn{
+        background-color: #FFFFFF;	
+        position: relative;	
+        box-shadow:  0px 0px 20px 30px rgba(250, 250, 250, 0.25);
+    }
+
+
+    /**********************
+    SEARCH RESULTS
+    **********************/
+    .resultsContainer{
+        transform: scale(1.1);
+        margin-bottom: 5%;
+    }
+
+    #movieTitle{
+        font-size: 2.5rem;
+    } 
+
+    .movieTitleDiv{
+        display: block;
+        padding-bottom: 5%;
+    }
+
+    .titleAndGoToBtns{
+        display: block;
+    }
+
+    #resultsPosterSize{
+        border: 7px solid #fff;
+        margin-left: 15%;
+    }
+
+    .info{
+        transform: scale(.95);
+        padding: 2%;
+    }
+
+    .resultsBtnDiv{
+        display: flex;
+        justify-content: space-between;
+        transform: scale(.9);
+    }
+    
+    .goToBtnResults{
+        transform: scale(.75);
+        margin-right: 40%;
+    }
+
+    .movieGridContainer{
+        padding-top: 8%;
+    }
+}
+
+
+@media all and (min-width: 480px) and (max-width: 768px) { 
+    /**********************
+    LOGIN PAGE
+    **********************/
+    #loginContainer{
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #loginBtn{
+        width: 75%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
+    /**********************
+    SEARCH PAGE
+    **********************/
+    .searchGradientBackground {
+        background: radial-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, .8)), url(
+            "https://images.unsplash.com/photo-1616530940355-351fabd9524b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80") no-repeat center fixed;
+        margin: 0;
+    }
+
+    #searchPosterSize, .removeDiv{
+        display: none;
+    }
+
+    .searchContent{
+        margin: auto;
+        width: 75%;
+        margin-bottom: 50%;
+    }
+
+    #searchH1{
+        text-shadow: 2px 3px 2px black;
+        margin-top: 25%;
+    }
+
+    .goToBtn{
+        background-color: #FFFFFF;	
+        position: relative;	
+        box-shadow:  0px 0px 20px 30px rgba(250, 250, 250, 0.25);
+    }
+}
+
+
+@media (min-device-width: 320px)  and (max-width: 768px) { 
+    /**********************
+    LOGIN AND SIGN UP PAGES
+    **********************/
+    #loginContainer, #signupContainer{
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #loginBtn{
+        width: 75%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
+    /**********************
+   SEARCH PAGE
+    **********************/
+    .searchGradientBackground {
+        background: radial-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, .8)), url(
+            "https://images.unsplash.com/photo-1616530940355-351fabd9524b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80") no-repeat center fixed;
+        margin: 0;
+    }
+
+    #searchPosterSize, .removeDiv{
+        display: none;
+    }
+
+    .searchContent{
+        margin: auto;
+        width: 75%;
+        margin-bottom: 75%;
+    }
+
+    #searchH1{
+        text-shadow: 2px 3px 2px black;
+        font-size: 2.15rem;
+    }
+
+    .goToBtn{
+        background-color: #FFFFFF;	
+        position: relative;	
+        box-shadow:  0px 0px 20px 30px rgba(250, 250, 250, 0.25);
+    }
+
+
+    /**********************
+    SEARCH RESULTS
+    **********************/
+    .resultsContainer{
+        transform: scale(1.1);
+        margin-bottom: 15%;
+    }
+
+    #movieTitle{
+        font-size: 2.5rem;
+        padding-top: 15%;
+    } 
+
+    .movieTitleDiv{
+        display: block;
+        padding-bottom: 7%;
+    }
+
+    .titleAndGoToBtns{
+        display: block;
+        margin-right: 20%;
+    }
+
+    .info{
+        transform: scale(.95);
+        padding: 2%;
+        width: 80%;
+    }
+
+    .resultsBtnDiv{
+        display: flex;
+        justify-content: space-between;
+        transform: scale(.9);
+    }
+    
+    .goToBtnResults{
+        transform: scale(.7);
+        margin-right: 50%;
+    }    
+
+    #resultsPosterSize, .resultRemoveDiv{
+        display: none;
+    }
+
+    .movieGridContainer{
+        /* padding-top: 3%; */
+        padding-top: 13%;
+    }
+
+
+    /********************************
+    WATCHED and WATCHLIST
+    ********************************/
+    .movieGrid {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    }
+    .links{
+       font-size: .85rem;
+       padding-bottom: 5%;
+    }
+}
