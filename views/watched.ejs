@@ -1,0 +1,33 @@
+<%- include('partials/headerWithSearch') -%>
+
+<div class="listBackground">
+    <div class="movieGridContainer">
+        <p class="">Hello, <%= user.userName %> </p>
+
+        <div class="links">
+            <a href="/watchlist">Go to Watchlist</a>
+            <a href="/search">Go to Search</a>
+            <a href="/logout" class="logout">Logout</a>
+        </div>
+
+        <h2 class="listH2">You have watched <%= watched.length %> films.</h2>
+
+
+        <div class="movieGrid">
+            <% for(var i = 0; i <watched.length; i++) {%>
+            <div class="movieListItem">
+                <div class="poster-container">
+                    <form action="/search/deleteWatched/<%= watched[i]._id %>?_method=DELETE" method="POST">
+                        <button class="fa fa-trash trash-icon trashcanUnset"><a class="" type="submit"></a></button>
+                    </form>
+                    <a href="/search/showSingleResult?movieID=<%= watched[i].movieID %>">
+                        <img class="poster" src="<%= watched[i].poster %>"></img>
+                    </a>
+                </div>
+            </div>
+            <% } %>
+        </div>
+    </div>
+</div>
+
+<%- include('partials/footer') -%>
