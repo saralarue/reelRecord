@@ -1,0 +1,36 @@
+<%- include('partials/header') -%>
+
+<section class="hero is-fullheight is-dark searchGradientBackground">
+    <div class="hero-body">
+        <div class="container has-text-centered">
+            <div class="columns is-vcentered">
+
+                <div class="column removeDiv">
+                    <figure class="image">
+                        <img src="https://images.unsplash.com/photo-1616530940355-351fabd9524b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" id="searchPosterSize" alt="Description">
+                    </figure>
+                </div>
+
+                <div class="column is-offset-1 searchContent">
+                    <h1 class="title is-2" id="searchH1">Search for movies here</h1>
+                    <div>
+                        <form action="/search/searchMovie" enctype="multipart/form-data" method="GET">
+                            <div class="control has-icons-left">
+                                <label for="searchTerm"></label>
+                                <input type="text" id="searchTerm" name="searchTerm" placeholder="" class="input is-expanded is-large">
+                                <span class="icon is-left"><i class="fa fa-search"></i></span>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="searchPageGoToBtns">
+                        <a href="/watched" class="button is-white is-outlined is-medium goToBtn">Go to Watched</a>
+                        <a href="/watchlist" class="button is-white is-outlined is-medium goToBtn">Go to Watchlist</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<%- include('partials/footer') -%>
