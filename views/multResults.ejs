@@ -1,0 +1,19 @@
+<%- include('partials/headerWithSearch') -%>
+
+<div class="listBackground">
+    <div class="movieGridContainer">
+        <div class="movieGrid">
+            <% for (let i = 0; i < movieData.length; i++) { %>
+            <div class="movieListItem">
+                <div class="poster-container">
+                    <a href="/search/showSingleResult?movieID=<%= movieData[i].movieID %>">
+                        <img src="<%= movieData[i].poster %>" alt="<%= movieData[i].title %> ">
+                    </a>
+                </div>
+            </div>
+            <% } %>
+        </div>
+    </div>
+</div>
+
+<%- include('partials/footer') -%>
