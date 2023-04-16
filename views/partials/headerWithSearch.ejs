@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Reel Record</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.4/css/bulma.min.css">
+        <link rel="stylesheet" href="/css/style.css"/>
+        <link rel="apple-touch-icon" sizes="180x180" href="/imgs/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/imgs/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/imgs/favicon-16x16.png">
+        <link rel="manifest" href="/site.webmanifest">
+    </head>
+
+    <body>
+
+        <div class="resultsHeader">
+            <div class="resultsH1">
+                <h1 class="title"><a href="/search">Reel Record</a></h1>
+            </div>
+
+            <div class="resultsSearchbar">
+                <form action="/search/searchMovie" enctype="multipart/form-data" method="GET">
+                    <div class="control has-icons-left">
+                        <label for="searchTerm"></label>
+                        <input type="text" id="searchTerm" name="searchTerm" placeholder="" class="input is-expanded is-small">
+                        <span class="icon is-left"><i class="fa fa-search"></i></span>
+                    </div>
+                </form>
+            </div>
+        </div>
