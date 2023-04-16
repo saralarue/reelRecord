@@ -1,0 +1,57 @@
+<%- include('partials/headerWithSearch') -%>
+
+<section class="hero is-fullheight is-dark resultsGradientBackground">
+
+    <div class="hero-body">
+        <div class="resultsContainer">
+
+            <div class="columns is-vcentered">
+                <!-- poster img -->
+                <div class="column resultRemoveDiv">
+                    <figure class="image">
+                        <img src=" <%= poster %> " alt="Movie Poster" id="resultsPosterSize">
+                    </figure>
+                </div>
+
+                <!-- info card -->
+                <div class="column is-6 is-offset-1 info">
+                    <div>
+                        <div class="titleAndGoToBtns">
+                            <!-- movie title -->
+                            <div class="movieTitleDiv">
+                                <h3 class="title is-1" id="movieTitle"> <%= title %> </h3>
+                            </div>
+
+                            <div class="resultsBtnDiv">
+                                <form action="/search/createWatched" enctype="multipart/form-data" method="POST">
+                                    <button type="submit" value="Upload" class="button is-warning is-outlined is-small addToBtns watchedBtn">Add to Watched</button>
+                                </form>
+
+                                <form action="/search/createWatchlist" enctype="multipart/form-data" method="POST">
+                                    <button type="submit" value="Upload" class="button is-warning is-outlined is-small addToBtns">Add to Watchlist</button>
+                                </form>
+                            </div>
+                        </div>
+
+                        <div class="yearAndAvg">
+                            <p> Year: <%= year %> </p>
+                            <p> Rating: <%= voteAvg %> </p>
+                        </div>
+
+                        <div class="overview">
+                            <p> <%= overview %> </p>
+                        </div>
+
+                        <div class="goToBtnResults">
+                            <a href="/watched" class="button is-white is-outlined is-medium">Go to Watched</a>
+                            <a href="/watchlist" class="button is-white is-outlined is-medium">Go to Watchlist</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <span class="tmdbAttr">This product uses the TMDb API but is not endorsed or certified by TMDb.</span>
+</section>
+
+<%- include('partials/footer') -%>
